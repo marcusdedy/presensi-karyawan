@@ -31,9 +31,12 @@ document.addEventListener('DOMContentLoaded', function() {
         title: '{{ $tipe === "masuk" ? "Selamat Datang, " . $employee->nama_lengkap . "!" : "Terima Kasih, " . $employee->nama_lengkap . "!" }}',
         html: `
             @if($motivation->gif_url)
-            <img src="{{ $motivation->gif_url }}" style="width: 180px; height: 180px; border-radius: 12px; margin: 10px 0; object-fit: cover;" alt="motivasi">
+            <div style="margin: 15px 0;">
+                <img src="{{ $motivation->gif_url }}" style="width: 120px; height: 120px; object-fit: contain;" alt="motivasi"
+                     onerror="this.style.display='none'">
+            </div>
             @endif
-            <p style="font-size: 15px; color: #555; margin-top: 15px; line-height: 1.6;">
+            <p style="font-size: 16px; color: #555; margin-top: 15px; line-height: 1.7; font-style: italic;">
                 "{{ $motivation->pesan }}"
             </p>
         `,

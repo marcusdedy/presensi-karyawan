@@ -220,25 +220,25 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
-        // Motivations - Masuk
+        // Motivations - Masuk (using SVG emoji images as reliable fallback)
         $motivasiMasuk = [
-            ['tipe' => 'masuk', 'kategori' => 'umum', 'pesan' => 'Setiap hari adalah halaman baru. Tulis cerita terbaikmu hari ini!', 'gif_url' => 'https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif'],
-            ['tipe' => 'masuk', 'kategori' => 'umum', 'pesan' => 'Kerja keras hari ini adalah investasi untuk masa depan yang lebih cerah!', 'gif_url' => 'https://media.giphy.com/media/l0MYt5jPR6QX5APm0/giphy.gif'],
-            ['tipe' => 'masuk', 'kategori' => 'pagi', 'pesan' => 'Pagi yang indah dimulai dari langkah pertama. Kamu sudah di sini, itu luar biasa!', 'gif_url' => 'https://media.giphy.com/media/xT5LMHxhOfscxPfIfm/giphy.gif'],
-            ['tipe' => 'masuk', 'kategori' => 'senin', 'pesan' => 'Senin bukan beban, tapi awal dari pencapaian baru minggu ini! Semangat!', 'gif_url' => 'https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif'],
-            ['tipe' => 'masuk', 'kategori' => 'jumat', 'pesan' => 'Happy Friday! Satu hari lagi menuju weekend. Finish strong!', 'gif_url' => 'https://media.giphy.com/media/l0MYt5jPR6QX5APm0/giphy.gif'],
-            ['tipe' => 'masuk', 'kategori' => 'umum', 'pesan' => 'Kamu adalah bagian penting dari tim ini. Terima kasih sudah hadir hari ini!', 'gif_url' => 'https://media.giphy.com/media/26u4cqiYI30juCOGY/giphy.gif'],
-            ['tipe' => 'masuk', 'kategori' => 'umum', 'pesan' => 'Sukses tidak datang dari apa yang kamu lakukan sesekali, tapi dari yang kamu lakukan konsisten!', 'gif_url' => 'https://media.giphy.com/media/xT5LMHxhOfscxPfIfm/giphy.gif'],
+            ['tipe' => 'masuk', 'kategori' => 'umum', 'pesan' => 'Setiap hari adalah halaman baru. Tulis cerita terbaikmu hari ini!', 'gif_url' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4aa.svg'],
+            ['tipe' => 'masuk', 'kategori' => 'umum', 'pesan' => 'Kerja keras hari ini adalah investasi untuk masa depan yang lebih cerah!', 'gif_url' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2b50.svg'],
+            ['tipe' => 'masuk', 'kategori' => 'pagi', 'pesan' => 'Pagi yang indah dimulai dari langkah pertama. Kamu sudah di sini, itu luar biasa!', 'gif_url' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f305.svg'],
+            ['tipe' => 'masuk', 'kategori' => 'senin', 'pesan' => 'Senin bukan beban, tapi awal dari pencapaian baru minggu ini! Semangat!', 'gif_url' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f525.svg'],
+            ['tipe' => 'masuk', 'kategori' => 'jumat', 'pesan' => 'Happy Friday! Satu hari lagi menuju weekend. Finish strong!', 'gif_url' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f389.svg'],
+            ['tipe' => 'masuk', 'kategori' => 'umum', 'pesan' => 'Kamu adalah bagian penting dari tim ini. Terima kasih sudah hadir hari ini!', 'gif_url' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f91d.svg'],
+            ['tipe' => 'masuk', 'kategori' => 'umum', 'pesan' => 'Sukses tidak datang dari apa yang kamu lakukan sesekali, tapi dari yang kamu lakukan konsisten!', 'gif_url' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f3c6.svg'],
         ];
 
         // Motivations - Pulang
         $motivasiPulang = [
-            ['tipe' => 'pulang', 'kategori' => 'umum', 'pesan' => 'Terima kasih atas dedikasi hari ini. Kamu hebat! Istirahat yang cukup ya.', 'gif_url' => 'https://media.giphy.com/media/3o7abGQa0aRJUurpII/giphy.gif'],
-            ['tipe' => 'pulang', 'kategori' => 'umum', 'pesan' => 'Kerja keras hari ini tidak akan sia-sia. Sampai jumpa besok!', 'gif_url' => 'https://media.giphy.com/media/l3q2wJsC23ikJg9xe/giphy.gif'],
-            ['tipe' => 'pulang', 'kategori' => 'umum', 'pesan' => 'Istirahat adalah bagian dari produktivitas. Nikmati waktumu!', 'gif_url' => 'https://media.giphy.com/media/3o7abGQa0aRJUurpII/giphy.gif'],
-            ['tipe' => 'pulang', 'kategori' => 'jumat', 'pesan' => 'Weekend sudah menanti! Nikmati istirahatmu, kamu layak mendapatkannya.', 'gif_url' => 'https://media.giphy.com/media/l3q2wJsC23ikJg9xe/giphy.gif'],
-            ['tipe' => 'pulang', 'kategori' => 'lembur', 'pesan' => 'Pulang lebih malam menunjukkan tanggung jawabmu yang besar. Salut! Hati-hati di jalan.', 'gif_url' => 'https://media.giphy.com/media/3o7abGQa0aRJUurpII/giphy.gif'],
-            ['tipe' => 'pulang', 'kategori' => 'umum', 'pesan' => 'Hari ini sudah kamu lewati dengan baik. Besok pasti lebih baik lagi!', 'gif_url' => 'https://media.giphy.com/media/l3q2wJsC23ikJg9xe/giphy.gif'],
+            ['tipe' => 'pulang', 'kategori' => 'umum', 'pesan' => 'Terima kasih atas dedikasi hari ini. Kamu hebat! Istirahat yang cukup ya.', 'gif_url' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f44f.svg'],
+            ['tipe' => 'pulang', 'kategori' => 'umum', 'pesan' => 'Kerja keras hari ini tidak akan sia-sia. Sampai jumpa besok!', 'gif_url' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f44b.svg'],
+            ['tipe' => 'pulang', 'kategori' => 'umum', 'pesan' => 'Istirahat adalah bagian dari produktivitas. Nikmati waktumu!', 'gif_url' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f634.svg'],
+            ['tipe' => 'pulang', 'kategori' => 'jumat', 'pesan' => 'Weekend sudah menanti! Nikmati istirahatmu, kamu layak mendapatkannya.', 'gif_url' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f60e.svg'],
+            ['tipe' => 'pulang', 'kategori' => 'lembur', 'pesan' => 'Pulang lebih malam menunjukkan tanggung jawabmu yang besar. Salut! Hati-hati di jalan.', 'gif_url' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f31f.svg'],
+            ['tipe' => 'pulang', 'kategori' => 'umum', 'pesan' => 'Hari ini sudah kamu lewati dengan baik. Besok pasti lebih baik lagi!', 'gif_url' => 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2764.svg'],
         ];
 
         foreach (array_merge($motivasiMasuk, $motivasiPulang) as $motivasi) {
