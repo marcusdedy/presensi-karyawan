@@ -18,7 +18,7 @@ class AttendanceService
 
         // Cek sudah absen hari ini
         $existing = Attendance::where('employee_id', $employee->id)
-            ->where('tanggal', $today)
+            ->whereDate('tanggal', $today)
             ->first();
 
         if ($existing && $existing->jam_masuk) {
@@ -68,14 +68,15 @@ class AttendanceService
             ]);
             $attendance = $existing;
         } else {
-            $attendance = Attendance::create([
-                'employee_id' => $employee->id,
-                'tanggal' => $today,
-                'jam_masuk' => $jamMasuk,
-                'shift_id' => $shift?->id,
-                'status' => $status,
-                'keterangan' => $keterangan,
-            ]);
+            $attendance = Attendance::updateOrCreate(
+                ['employee_id' => $employee->id, 'tanggal' => $today],
+                [
+                    'jam_masuk' => $jamMasuk,
+                    'shift_id' => $shift?->id,
+                    'status' => $status,
+                    'keterangan' => $keterangan,
+                ]
+            );
         }
 
         return [
@@ -93,7 +94,7 @@ class AttendanceService
         $today = $now->toDateString();
 
         $attendance = Attendance::where('employee_id', $employee->id)
-            ->where('tanggal', $today)
+            ->whereDate('tanggal', $today)
             ->first();
 
         if (!$attendance || !$attendance->jam_masuk) {

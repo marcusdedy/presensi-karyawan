@@ -41,7 +41,7 @@ class AbsenController extends Controller
 
         // Check if already has today's attendance
         $todayAttendance = Attendance::where('employee_id', $employee->id)
-            ->where('tanggal', now()->toDateString())
+            ->whereDate('tanggal', now()->toDateString())
             ->first();
 
         $canAbsenMasuk = !$todayAttendance || !$todayAttendance->jam_masuk;
