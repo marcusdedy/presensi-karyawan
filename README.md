@@ -67,8 +67,11 @@ php artisan serve
 - Password: `admin123`
 
 ### Karyawan (Sample)
-- NIK: `001` s/d `005`
-- PIN: `123456` (semua sama)
+- NIK: `001`, PIN: `111111` (Ahmad Fauzi)
+- NIK: `002`, PIN: `222222` (Siti Aminah)
+- NIK: `003`, PIN: `333333` (Budi Santoso)
+- NIK: `004`, PIN: `444444` (Dewi Lestari)
+- NIK: `005`, PIN: `555555` (Rudi Hermawan)
 
 ## Struktur Database
 

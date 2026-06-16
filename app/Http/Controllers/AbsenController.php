@@ -23,20 +23,23 @@ class AbsenController extends Controller
 
     public function verify(Request $request)
     {
-        $request->validate(['pin' => 'required|string|min:4|max:8']);
+        $request->validate([
+            'nik' => 'required|string',
+            'pin' => 'required|string|min:4|max:8',
+        ]);
 
-        $employees = Employee::where('status', 'aktif')->get();
-        $employee = null;
-
-        foreach ($employees as $emp) {
-            if (Hash::check($request->pin, $emp->pin)) {
-                $employee = $emp;
-                break;
-            }
-        }
+        // Cari karyawan berdasarkan NIK
+        $employee = Employee::where('nik', $request->nik)
+            ->where('status', 'aktif')
+            ->first();
 
         if (!$employee) {
-            return back()->with('error', 'PIN tidak valid. Silakan coba lagi.');
+            return back()->with('error', 'NIK tidak ditemukan.')->withInput(['nik' => $request->nik]);
+        }
+
+        // Verifikasi PIN
+        if (!Hash::check($request->pin, $employee->pin)) {
+            return back()->with('error', 'PIN salah. Silakan coba lagi.')->withInput(['nik' => $request->nik]);
         }
 
         // Check if already has today's attendance

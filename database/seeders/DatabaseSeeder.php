@@ -119,7 +119,7 @@ class DatabaseSeeder extends Seeder
         $employees = [
             [
                 'nik' => '001',
-                'pin' => Hash::make('123456'),
+                'pin' => Hash::make('111111'),
                 'nama_lengkap' => 'Ahmad Fauzi',
                 'tempat_lahir' => 'Jakarta',
                 'tanggal_lahir' => '1990-05-15',
@@ -135,7 +135,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'nik' => '002',
-                'pin' => Hash::make('123456'),
+                'pin' => Hash::make('222222'),
                 'nama_lengkap' => 'Siti Aminah',
                 'tempat_lahir' => 'Bandung',
                 'tanggal_lahir' => '1992-08-20',
@@ -151,7 +151,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'nik' => '003',
-                'pin' => Hash::make('123456'),
+                'pin' => Hash::make('333333'),
                 'nama_lengkap' => 'Budi Santoso',
                 'tempat_lahir' => 'Surabaya',
                 'tanggal_lahir' => '1995-12-10',
@@ -168,7 +168,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'nik' => '004',
-                'pin' => Hash::make('123456'),
+                'pin' => Hash::make('444444'),
                 'nama_lengkap' => 'Dewi Lestari',
                 'tempat_lahir' => 'Yogyakarta',
                 'tanggal_lahir' => '1993-03-25',
@@ -184,7 +184,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'nik' => '005',
-                'pin' => Hash::make('123456'),
+                'pin' => Hash::make('555555'),
                 'nama_lengkap' => 'Rudi Hermawan',
                 'tempat_lahir' => 'Semarang',
                 'tanggal_lahir' => '1988-07-30',
